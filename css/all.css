@@ -154,6 +154,7 @@ img {
     max-width: 375px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-bottom: 30px;
   }
 }
 .container .header .showmenu {
