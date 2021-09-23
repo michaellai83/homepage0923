@@ -1,0 +1,1101 @@
+@charset "UTF-8";
+/*
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 照片避免破圖*/
+.white {
+  color: #FFFFFF;
+}
+
+.yellow {
+  color: #FFE180;
+}
+
+.darkgreen {
+  color: #3F5D45;
+}
+
+.lightgreen {
+  color: #EAF0ED;
+}
+
+.gray {
+  color: #8DA291;
+}
+
+.ffp {
+  font-family: "PingFang TC";
+}
+
+.fwl {
+  font-weight: "light";
+}
+
+.fwz {
+  font-weight: "semibold";
+}
+
+.fz16 {
+  font-size: 16px;
+}
+
+.fz20 {
+  font-size: 20px;
+}
+
+.fz24 {
+  font-size: 24px;
+}
+
+.lh16 {
+  line-height: 16px;
+}
+
+.lh20 {
+  line-height: 20px;
+}
+
+.lh24 {
+  line-height: 24px;
+}
+
+.lh29 {
+  line-height: 29px;
+}
+
+.lh30 {
+  line-height: 30px;
+}
+
+.lh32 {
+  line-height: 32px;
+}
+
+.lh73 {
+  line-height: 73px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.container .header {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 767px) {
+  .container .header {
+    max-width: 375px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+.container .header .showmenu {
+  display: none;
+}
+@media (max-width: 767px) {
+  .container .header .showmenu {
+    display: block;
+    display: block;
+    background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true) no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 15%;
+    height: 24px;
+    background-position: left;
+  }
+}
+.container .header .logo {
+  display: block;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg) no-repeat;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 60%;
+  height: 40px;
+}
+@media (max-width: 767px) {
+  .container .header .logo {
+    width: 60%;
+    display: block;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-lg-dark.svg) no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 18px;
+    background-position: center;
+  }
+}
+.container .header .meau1 {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .container .header .meau1 {
+    display: none;
+    position: absolute;
+  }
+}
+.container .header .meau1 li {
+  text-align: center;
+  padding-right: 60px;
+}
+.container .header .meau1 li a {
+  text-decoration: none;
+  display: block;
+}
+.container .header .meau1 li a:hover {
+  background-color: #3F5D45;
+  color: #FFFFFF;
+}
+.container .header .shoppcart {
+  width: 5%;
+  margin-top: 10px;
+  height: 24px;
+  display: block;
+  background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true) no-repeat center;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.container .mainpic1 {
+  max-width: 940px;
+  height: 496px;
+  margin: 0 auto;
+  background-image: url(https://images.unsplash.com/photo-1473256599800-b48c7c88cd7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae0d68ab0db4ee79bdce92722b31112b&auto=format&fit=crop&w=2725&q=80);
+  background-size: cover;
+  position: relative;
+  margin-bottom: 247px;
+}
+@media (max-width: 767px) {
+  .container .mainpic1 {
+    max-width: 375px;
+    height: 277px;
+  }
+}
+.container .mainpic1 .box1 {
+  background-color: #FFE180;
+  background-image: -webkit-cross-fade(ages.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60), 100%, -1490914327627);
+  background-image: cross-fade(url(https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60), 100%);
+  background-size: cover;
+  width: 30%;
+  height: 256px;
+  position: absolute;
+  bottom: -166px;
+  left: 39px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .container .mainpic1 .box1 {
+    left: 0;
+    bottom: -65%;
+    width: 33%;
+    height: 180px;
+  }
+}
+.container .mainpic1 .box1 a {
+  text-decoration: none;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  display: block;
+  margin: 0 auto;
+  padding-top: 30%;
+}
+@media (max-width: 767px) {
+  .container .mainpic1 .box1 a {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.container .mainpic1 .box1 a:hover {
+  color: #FFFFFF;
+}
+.container .mainpic1 .box2 {
+  background-color: #3F5D45;
+  background-image: -webkit-cross-fade(ages.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60), 100%, -1490914327627);
+  background-image: cross-fade(url(https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60), 100%);
+  background-size: cover;
+  opacity: 0.7;
+  width: 30%;
+  height: 256px;
+  position: absolute;
+  bottom: -166px;
+  left: 35%;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .container .mainpic1 .box2 {
+    left: 33.3%;
+    bottom: -65%;
+    width: 33%;
+    height: 180px;
+  }
+}
+.container .mainpic1 .box2 a {
+  text-decoration: none;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  display: block;
+  margin: 0 auto;
+  padding-top: 30%;
+}
+@media (max-width: 767px) {
+  .container .mainpic1 .box2 a {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.container .mainpic1 .box2 a:hover {
+  color: #FFE180;
+}
+.container .mainpic1 .box3 {
+  background-color: #3F5D45;
+  background-image: -webkit-cross-fade(ages.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60), 100%, -1490914327627);
+  background-image: cross-fade(url(https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60), 100%);
+  background-size: cover;
+  opacity: 0.7;
+  width: 30%;
+  height: 256px;
+  position: absolute;
+  bottom: -166px;
+  left: 66%;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .container .mainpic1 .box3 {
+    left: 66.5%;
+    bottom: -65%;
+    width: 33%;
+    height: 180px;
+  }
+}
+.container .mainpic1 .box3 a {
+  text-decoration: none;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  display: block;
+  margin: 0 auto;
+  padding-top: 30%;
+}
+@media (max-width: 767px) {
+  .container .mainpic1 .box3 a {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.container .mainpic1 .box3 a:hover {
+  color: #FFE180;
+}
+.container .mainarticle1 {
+  background-color: #EAF0ED;
+  margin-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 {
+    max-width: 375px;
+    margin: 0 auto;
+    margin-top: 300px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.container .mainarticle1 .mainart {
+  max-width: 95%;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart {
+    max-width: 375px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.container .mainarticle1 .mainart .maintitle1 {
+  background-image: url(../images/lg-為什麼選擇了做甜點.svg);
+  background-repeat: no-repeat;
+  width: 11%;
+  height: 308px;
+  position: absolute;
+  top: -5%;
+  right: 0;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart .maintitle1 {
+    background-image: url(..//images/mobile/sm-橫式-為什麼選擇了做甜點.svg);
+    width: 53%;
+    height: 60px;
+    position: absolute;
+    top: -15%;
+    left: 30%;
+  }
+}
+.container .mainarticle1 .mainart .mainpic2 {
+  display: none;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart .mainpic2 {
+    display: block;
+    background-image: url(https://images.unsplash.com/photo-1519730722595-a5ff788dea4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2712a33fe9b13532f0682ac4e1e749b8&auto=format&fit=crop&w=600&q=60);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+  }
+}
+.container .mainarticle1 .mainart .maintext1 {
+  width: 40%;
+  height: 300px;
+  margin-left: 50%;
+  margin-right: 10%;
+  padding-right: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart .maintext1 {
+    width: 90%;
+    display: block;
+    height: auto;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+}
+.container .mainarticle1 .mainart .maintext1 p {
+  padding: 10px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart .maintext1 p {
+    line-height: 32px;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+  }
+}
+.container .mainarticle1 .mainart .maintext1 span {
+  display: none;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart .maintext1 span {
+    display: block;
+    line-height: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart .maintext1 .style1 {
+    display: none;
+  }
+}
+.container .mainarticle1 .mainart .maintext1 .style2 {
+  margin-right: 40px;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart .maintext1 .style2 {
+    display: none;
+  }
+}
+.container .mainarticle1 .mainart .mainpic2-1 {
+  background-image: url(https://images.unsplash.com/photo-1519730722595-a5ff788dea4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2712a33fe9b13532f0682ac4e1e749b8&auto=format&fit=crop&w=600&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 48%;
+  height: 460px;
+  z-index: 2;
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .container .mainarticle1 .mainart .mainpic2-1 {
+    display: none;
+  }
+}
+.container .mainarticle2 {
+  background-color: #EAF0ED;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 {
+    max-width: 375px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.container .mainarticle2 .mainart2 {
+  max-width: 95%;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 {
+    max-width: 375px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.container .mainarticle2 .mainart2 .mainpic3 {
+  background-image: url(https://images.unsplash.com/photo-1501432781167-c0ccfd492297?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=621c4e9986fba1c4514dfdc30e095bd2&auto=format&fit=crop&w=600&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 48%;
+  height: 460px;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 .mainpic3 {
+    display: none;
+  }
+}
+.container .mainarticle2 .mainart2 .mainpic3-1 {
+  display: none;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 .mainpic3-1 {
+    display: block;
+    background-image: url(https://images.unsplash.com/photo-1501432781167-c0ccfd492297?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=621c4e9986fba1c4514dfdc30e095bd2&auto=format&fit=crop&w=600&q=60);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+  }
+}
+.container .mainarticle2 .mainart2 .maintitle2 {
+  background-image: url(..//images/lg-為什麼一定要吃甜點.svg);
+  background-repeat: no-repeat;
+  width: 11%;
+  height: 308px;
+  position: absolute;
+  right: 50%;
+  top: -5%;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 .maintitle2 {
+    background-image: url(..//images/mobile/sm-橫式-為什麼一定要吃甜點.svg);
+    width: 53%;
+    height: 60px;
+    position: absolute;
+    top: -15%;
+    right: 20%;
+  }
+}
+.container .mainarticle2 .mainart2 .maintext2 {
+  width: 35%;
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 .maintext2 {
+    width: 90%;
+    display: block;
+    height: auto;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+}
+.container .mainarticle2 .mainart2 .maintext2 p {
+  padding: 10px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 .maintext2 p {
+    line-height: 32px;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+  }
+}
+.container .mainarticle2 .mainart2 .maintext2 span {
+  display: none;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 .maintext2 span {
+    display: block;
+    line-height: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 .maintext2 .style1 {
+    display: none;
+  }
+}
+.container .mainarticle2 .mainart2 .maintext2 .style2 {
+  padding-right: 20px;
+}
+@media (max-width: 767px) {
+  .container .mainarticle2 .mainart2 .maintext2 .style2 {
+    display: none;
+  }
+}
+.container .mainarticle3 {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.container .mainarticle3 .title3 {
+  background-image: url(../images/lg-想吃甜點是不需要理由的.svg);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 89px;
+  height: 327px;
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .container .mainarticle3 .title3 {
+    background-image: url(../images/mobile/sm-橫式-想吃甜點是不需要理由的.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 40%;
+    height: 60px;
+  }
+}
+.container .item {
+  max-width: 95%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.container .item .itempage {
+  width: 30%;
+}
+@media (max-width: 767px) {
+  .container .item .itempage {
+    width: 80%;
+  }
+}
+.container .item .itempage .item1 {
+  position: relative;
+}
+.container .item .itempage .item1 .box1 {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+.container .item .itempage .item1 .box1 p {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  color: #FFFFFF;
+  background-color: #3F5D45;
+  font-family: "PingFang TC";
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+}
+.container .item .itempage .item1 .heart {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+}
+.container .item .itempage .item1 img {
+  width: 100%;
+}
+.container .item .itempage .itemname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #EAF0ED;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+.container .item .itempage .itemname li {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "PingFang TC";
+  font-weight: "light";
+  color: #3F5D45;
+  padding: 10px;
+  width: 50%;
+  border-right: 1px solid #EAF0ED;
+}
+.container .item .itempage a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "PingFang TC";
+  font-weight: "semibold";
+  font-size: 24px;
+  line-height: 20px;
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  padding: 10px;
+}
+.container .item .itempage a:hover {
+  color: #FFFFFF;
+  background-color: #3F5D45;
+}
+.container .item .itempage2 {
+  width: 30%;
+}
+@media (max-width: 767px) {
+  .container .item .itempage2 {
+    display: none;
+  }
+}
+.container .item .itempage2 .item1 {
+  position: relative;
+}
+.container .item .itempage2 .item1 .box1 {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+.container .item .itempage2 .item1 .box1 p {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  color: #FFFFFF;
+  background-color: #3F5D45;
+  font-family: "PingFang TC";
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+}
+.container .item .itempage2 .item1 .heart {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+}
+.container .item .itempage2 .item1 img {
+  max-width: 100%;
+}
+.container .item .itempage2 .itemname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #EAF0ED;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+.container .item .itempage2 .itemname li {
+  width: 50%;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "PingFang TC";
+  font-weight: "light";
+  color: #3F5D45;
+  padding: 10px;
+  border-right: 1px solid #EAF0ED;
+}
+.container .item .itempage2 a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "PingFang TC";
+  font-weight: "semibold";
+  font-size: 24px;
+  line-height: 20px;
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  padding: 10px;
+}
+.container .item .itempage2 a:hover {
+  color: #FFFFFF;
+  background-color: #3F5D45;
+}
+.container .item .itempage3 {
+  width: 30%;
+}
+@media (max-width: 767px) {
+  .container .item .itempage3 {
+    display: none;
+  }
+}
+.container .item .itempage3 .item1 {
+  position: relative;
+}
+.container .item .itempage3 .item1 .box1 {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+.container .item .itempage3 .item1 .box1 p {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  color: #FFFFFF;
+  background-color: #3F5D45;
+  font-family: "PingFang TC";
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+}
+.container .item .itempage3 .item1 .heart {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+}
+.container .item .itempage3 .item1 .image1 {
+  background-image: url(https://images.unsplash.com/photo-1504473089979-b1c4993a9653?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9db69b72e1f7d1b4e5c81cee531108ff&auto=format&fit=crop&w=700&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 315px;
+}
+.container .item .itempage3 .itemname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #EAF0ED;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+.container .item .itempage3 .itemname li {
+  width: 50%;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "PingFang TC";
+  font-weight: "light";
+  color: #3F5D45;
+  padding: 10px;
+  border-right: 1px solid #EAF0ED;
+}
+@media (max-width: 767px) {
+  .container .item .itempage3 .itemname li {
+    padding-right: 9%;
+  }
+}
+.container .item .itempage3 a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "PingFang TC";
+  font-weight: "semibold";
+  font-size: 24px;
+  line-height: 20px;
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  padding: 10px;
+}
+.container .item .itempage3 a:hover {
+  color: #FFFFFF;
+  background-color: #3F5D45;
+}
+.container .footer {
+  max-width: 100%;
+}
+.container .footer .up {
+  max-width: 100%;
+  background-color: #3F5D45;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.container .footer .up .upart {
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 767px) {
+  .container .footer .up .upart {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .container .footer .up .upart .left {
+    padding-bottom: 33px;
+  }
+}
+.container .footer .up .upart .left .logo {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-light.svg);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+}
+@media (max-width: 767px) {
+  .container .footer .up .upart .left .logo {
+    left: -20px;
+    top: -10px;
+  }
+}
+.container .footer .up .upart .left p {
+  font-family: "Helvetica Neue";
+  font-weight: "Reagular";
+  font-size: 24px;
+  line-height: 29px;
+  color: #EAF0ED;
+}
+.container .footer .up .upart .right {
+  background-color: #EAF0ED;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container .footer .up .upart .right input {
+  border: none;
+  background-color: #EAF0ED;
+}
+.container .footer .up .upart .emil {
+  padding-left: 10px;
+}
+.container .footer .up .upart .forward {
+  display: block;
+  background-color: #FFE180;
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_forward-24px.png?raw=true);
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+.container .footer .up .upart a:hover {
+  background-color: rgba(255, 255, 0, 0.774);
+}
+.container .footer .down {
+  max-width: 100%;
+  background-color: #EAF0ED;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.container .footer .down .downart {
+  max-width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container .footer .down .downart .dwonleft {
+  width: 80%;
+}
+.container .footer .down .downart .downlogo {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-lg-dark.svg);
+  background-repeat: no-repeat;
+  width: 172px;
+  height: 30px;
+  padding-bottom: 115px;
+}
+@media (max-width: 767px) {
+  .container .footer .down .downart .downlogo {
+    padding-bottom: 39.5px;
+  }
+}
+.container .footer .down .downart .tel {
+  font-family: "Helvetica Neue";
+  font-weight: "Regular";
+  font-size: 16px;
+  line-height: 20px;
+  color: #3F5D45;
+}
+.container .footer .down .downart .downright {
+  width: 100%;
+  background-image: url(../images/sm-今天是個吃甜點的好日子.svg);
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 220px;
+}
+@media (max-width: 767px) {
+  .container .footer .down .downart .downright {
+    display: none;
+  }
+}
+.container .footer .footerlast {
+  max-width: 100%;
+  background-color: #EAF0ED;
+}
+.container .footer .footerlast .footerbox {
+  max-width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .container .footer .footerlast .footerbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.container .footer .footerlast .footerbox .linebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .container .footer .footerlast .footerbox .linebox {
+    padding-bottom: 23px;
+  }
+}
+.container .footer .footerlast .footerbox .linebox .line {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-line%40.svg);
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  padding-right: 8px;
+}
+.container .footer .footerlast .footerbox .linebox .fb {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-facebook.svg);
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+}
+.container .footer .footerlast .footerbox .linebox .year {
+  font-family: "Times";
+  font-weight: "Regular";
+  font-size: 16px;
+  line-height: 19px;
+  color: #3F5D45;
+}

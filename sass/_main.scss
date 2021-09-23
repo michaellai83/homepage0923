@@ -1,0 +1,798 @@
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    .header{
+        max-width: 940px;
+        margin: 0 auto;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include pad {
+            max-width: 375px;
+            justify-content: space-around;
+        }
+        .showmenu{
+            display: none;
+            @include pad{
+                display: block;
+                @include dehaze;
+                width: 15%;
+                height: 24px;
+                background-position: left;
+            }
+        }
+        .logo{
+            @include logo ;
+            width: 60%;
+            height: 40px;
+            @include pad {
+                width: 60%;
+                @include logo2;
+                height: 18px;
+                background-position: center;
+            }
+        }
+        .meau1{
+            width: 40%;
+            display: flex;
+            text-align: center;
+            @include pad {
+                display: none;
+                position: absolute;
+            };
+            li{
+                text-align: center;
+                padding-right: 60px;
+                a{
+                    text-decoration: none;
+                    display: block;
+                    &:hover{
+                        background-color: $darkgreen;
+                        color:$white
+                    }
+                }
+            }
+            
+        }
+       
+        .shoppcart{
+            width: 5%;
+            margin-top: 10px;
+            height: 24px;
+            @include shoppingcart;
+        }
+    }
+    .mainpic1{
+        max-width: 940px;
+        height: 496px;
+        margin: 0 auto;
+        background-image: url(https://images.unsplash.com/photo-1473256599800-b48c7c88cd7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae0d68ab0db4ee79bdce92722b31112b&auto=format&fit=crop&w=2725&q=80);
+        background-size: cover;
+        position: relative;
+        margin-bottom: 247px;
+        @include pad {
+            max-width: 375px;
+            height: 277px;
+        };
+        
+        .box1{
+            background-color: $yellow;
+            background-image: cross-fade(url(https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60),100%); 
+            background-size: cover;
+            width: 30%;
+            height: 256px;
+            position:absolute;
+            bottom: -166px;
+            left: 39px;
+            text-align: center;
+            @include pad{
+                left: 0;
+                bottom: -65%;
+                width: 33%;
+                height: 180px;
+            };
+            a{
+                text-decoration: none;
+                writing-mode: vertical-lr;
+                display: block;
+                margin: 0 auto;
+                padding-top: 30%;
+                @include pad {
+                    font-size: $fz20;
+                    line-height: $lh20;
+                };
+                &:hover{
+                    color: $white;
+                }
+            }
+        }
+        .box2{
+            background-color: $darkgreen;
+            background-image: cross-fade(url(https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60),100%); 
+            background-size: cover;
+            opacity: 0.7;
+            width: 30%;
+            height: 256px;
+            position:absolute;
+            bottom: -166px;
+            left: 35%;
+            text-align: center;
+            @include pad{
+                left:33.3%;
+                bottom: -65%;
+                width: 33%;
+                height: 180px;
+            };
+            a{
+                text-decoration: none;
+                writing-mode: vertical-lr;
+                display: block;
+                margin: 0 auto;
+                padding-top: 30%;
+                @include pad {
+                    font-size: $fz20;
+                    line-height: $lh20;
+                };
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+        .box3{
+            background-color: $darkgreen;
+            background-image: cross-fade(url(https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60),100%); 
+            background-size: cover;
+            opacity: 0.7;
+            width: 30%;
+            height: 256px;
+            position:absolute;
+            bottom: -166px;
+            left: 66%;
+            text-align: center;
+            @include pad{
+                left: 66.5%;
+                bottom: -65%;
+                width: 33%;
+                height: 180px;
+            };
+            a{
+                text-decoration: none;
+                writing-mode: vertical-lr;
+                display: block;
+                margin: 0 auto;
+                padding-top: 30%;
+                @include pad {
+                    font-size: $fz20;
+                    line-height: $lh20;
+                };
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+    }
+    .mainarticle1{
+        background-color: $lightgreen;
+        margin-bottom: 50px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        @include pad{
+            max-width: 375px;
+            margin: 0 auto;
+            margin-top: 300px;
+            padding-top: 0;
+            padding-bottom: 0;
+        };
+        .mainart{
+            max-width: 95%;
+            margin: 0 auto;
+            align-items: center;
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            @include pad{
+                max-width: 375px;
+                flex-direction: column;
+            };
+            .maintitle1{
+                background-image: url(../images/lg-為什麼選擇了做甜點.svg);
+                background-repeat: no-repeat;
+                width: 11%;
+                height: 308px;
+                position: absolute;
+                top: -5%;
+                right: 0;
+                @include pad{
+                    background-image: url(..//images/mobile/sm-橫式-為什麼選擇了做甜點.svg);
+                    width: 53%;
+                    height: 60px;
+                    position: absolute;
+                    top:-15%;
+                    left:30%;
+                };
+            }
+            .mainpic2{
+                display: none;
+                @include pad{ 
+                    display: block;
+                    background-image: url(https://images.unsplash.com/photo-1519730722595-a5ff788dea4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2712a33fe9b13532f0682ac4e1e749b8&auto=format&fit=crop&w=600&q=60);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 100%;
+                    height: 250px;
+                };
+                
+            }
+            .maintext1{
+                width: 40%;
+                height: 300px;
+                margin-left: 50%;
+                margin-right: 10%;
+                padding-right: 80px;
+                display: flex;
+                flex-direction: row-reverse;
+                @include pad{
+                    width: 90%;
+                    display: block;
+                    height: auto;
+                    padding-right: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+                    padding-bottom: 30px;
+                }
+                p{
+                    padding: 10px;
+                    writing-mode: vertical-rl;
+                    @include pad {
+                        line-height: $lh32;
+                        writing-mode:horizontal-tb;
+                    }
+                     
+                }
+                span{
+                    display: none;
+                    @include pad{
+                        display: block;
+                        line-height: $lh32;
+                    }
+  
+ 
+                }
+                .style1 {                   
+                        @include pad{
+                            display: none;
+                        };
+                   
+                }
+                .style2{
+                    margin-right: 40px;
+                    @include pad {
+                        display: none;
+                    }
+                }
+            }
+            .mainpic2-1{
+                background-image: url(https://images.unsplash.com/photo-1519730722595-a5ff788dea4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2712a33fe9b13532f0682ac4e1e749b8&auto=format&fit=crop&w=600&q=60);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 48%;
+                height: 460px;
+                z-index: 2;
+                position: absolute;
+                @include pad{
+                    display: none;
+                };
+            }
+        }
+        
+    }
+    .mainarticle2{
+        background-color: $lightgreen;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        margin-bottom: 100px;
+        @include pad {
+            max-width: 375px;
+            margin: 0 auto;
+            margin-top: 100px;
+            margin-bottom: 5%;
+            padding-top: 0;
+            padding-bottom: 0;
+        };
+        .mainart2 {
+            max-width: 95%;
+            margin: 0 auto;
+            align-items: center;
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            @include pad{
+                max-width: 375px;
+                flex-direction: column;
+            };
+            .mainpic3 {
+                background-image: url(https://images.unsplash.com/photo-1501432781167-c0ccfd492297?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=621c4e9986fba1c4514dfdc30e095bd2&auto=format&fit=crop&w=600&q=60);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 48%;
+                height: 460px;
+                z-index: 2;
+                position: absolute;
+                right: 0;
+                @include pad {
+                    display: none
+                };
+    
+            }
+            .mainpic3-1{
+                display: none;
+                @include pad{ 
+                    display: block;
+                    background-image: url(https://images.unsplash.com/photo-1501432781167-c0ccfd492297?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=621c4e9986fba1c4514dfdc30e095bd2&auto=format&fit=crop&w=600&q=60);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 100%;
+                    height: 250px;
+                };
+                
+            }
+            .maintitle2{
+                background-image: url(..//images/lg-為什麼一定要吃甜點.svg);
+                background-repeat: no-repeat;
+                width: 11%;
+                height: 308px;
+                position: absolute;
+                right: 50%;
+                top: -5%;
+                
+                @include pad{
+                    background-image: url(..//images/mobile/sm-橫式-為什麼一定要吃甜點.svg);
+                    width: 53%;
+                    height: 60px;
+                    position: absolute;
+                    top:-15%;
+                    right: 20%;
+                    
+                };
+            }
+            .maintext2{
+                width: 35%;
+                height: 280px;
+                display: flex;
+                flex-direction: row-reverse;              
+                @include pad{
+                    width: 90%;
+                    display: block;
+                    height: auto;
+                    padding-right: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+                    padding-bottom: 30px;
+                };
+                p{
+                    padding: 10px;
+                    writing-mode: vertical-rl;
+                    @include pad {
+                        line-height: $lh32;
+                        writing-mode:horizontal-tb;
+                    }
+                     
+                }
+                span{
+                    display: none;
+                    @include pad{
+                        display: block;
+                        line-height: $lh32;
+                    }
+  
+ 
+                }
+                .style1 {                   
+                        @include pad{
+                            display: none;
+                        };
+                   
+                }
+                .style2{
+                    padding-right: 20px;
+                    @include pad {
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .mainarticle3{
+        max-width: 100%;
+        margin: 0 auto;
+        .title3{
+            background-image: url(../images/lg-想吃甜點是不需要理由的.svg);
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            width: 89px;
+            height: 327px;
+            margin-bottom: 80px;
+            @include pad{
+                background-image: url(../images/mobile/sm-橫式-想吃甜點是不需要理由的.svg);
+                background-repeat: no-repeat;
+                margin: 0 auto;
+                width: 40%;
+                height: 60px;
+                
+                
+                
+            }
+        }
+
+    }
+    .item{
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        .itempage{
+            width:30% ;
+            @include pad {
+                width: 80%;
+            }
+            .item1{
+                position: relative;
+                .box1{
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    p{
+                        writing-mode: vertical-lr;
+                        color: $white;
+                        background-color: $darkgreen;
+                        font-family: $ffp;
+                        font-size: $fz16;
+                        line-height: $lh20;
+                        padding: 10px;
+                    }
+                }
+                .heart{
+                    position: absolute;
+                    top:10px;
+                    right: 22px;
+                }
+                img{
+                   width: 100%; 
+                }
+            }
+            .itemname {
+                display: flex;
+                border:1px solid $lightgreen;
+                justify-content: space-around;
+                width: 100%;
+                li{
+                    font-size: $fz20;
+                    line-height: $lh20;
+                    font-family: $ffp;
+                    font-weight: $fwl;
+                    color: $darkgreen;
+                    padding: 10px;
+                    width: 50%;
+                    border-right:1px solid $lightgreen;
+                    
+                }
+            }
+            a{
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                font-family: $ffp;
+                font-weight: $fws;
+                font-size: $fz24;
+                line-height: $lh20;
+                color: $darkgreen;
+                background-color: $lightgreen;
+                padding: 10px;
+                &:hover{
+                    color:$white;
+                    background-color: $darkgreen;
+                }
+            }
+        }
+        .itempage2{
+            width:30% ;
+            @include pad {
+               display: none;
+            }
+            .item1{
+                position: relative;
+                .box1{
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    p{
+                        writing-mode: vertical-lr;
+                        color: $white;
+                        background-color: $darkgreen;
+                        font-family: $ffp;
+                        font-size: $fz16;
+                        line-height: $lh20;
+                        padding: 10px;
+                    }
+                }
+                .heart{
+                    position: absolute;
+                    top:10px;
+                    right: 22px;
+                }
+                img{
+                   max-width: 100%;  
+                   }
+                
+            }
+            .itemname{
+                display: flex;
+                border:1px solid $lightgreen;
+                justify-content: space-around;
+                width: 100%;
+                li{
+                    width: 50%;
+                    font-size: $fz20;
+                    line-height: $lh20;
+                    font-family: $ffp;
+                    font-weight: $fwl;
+                    color: $darkgreen;
+                    padding: 10px;                  
+                    border-right:1px solid $lightgreen;
+                }
+            }
+            a{
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                font-family: $ffp;
+                font-weight: $fws;
+                font-size: $fz24;
+                line-height: $lh20;
+                color: $darkgreen;
+                background-color: $lightgreen;
+                padding: 10px;
+                &:hover{
+                    color:$white;
+                    background-color: $darkgreen;
+                }
+            }
+        }
+        .itempage3{
+            width:30% ;
+            @include pad {
+               display: none;
+            }
+            .item1{
+                position: relative;
+                .box1{
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    p{
+                        writing-mode: vertical-lr;
+                        color: $white;
+                        background-color: $darkgreen;
+                        font-family: $ffp;
+                        font-size: $fz16;
+                        line-height: $lh20;
+                        padding: 10px;
+                    }
+                }
+                .heart{
+                    position: absolute;
+                    top:10px;
+                    right: 22px;
+                }
+               .image1{
+                   background-image: url(https://images.unsplash.com/photo-1504473089979-b1c4993a9653?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9db69b72e1f7d1b4e5c81cee531108ff&auto=format&fit=crop&w=700&q=60);
+                   background-repeat: no-repeat;
+                   background-size: cover;
+                   width: 100%;
+                   height: 315px;
+               }
+                
+            }
+            .itemname {
+                display: flex;
+                border:1px solid $lightgreen;
+                justify-content: space-around;
+                width: 100%;
+                li{
+                    width: 50%;
+                    font-size: $fz20;
+                    line-height: $lh20;
+                    font-family: $ffp;
+                    font-weight: $fwl;
+                    color: $darkgreen;
+                    padding: 10px;
+                    border-right:1px solid $lightgreen;
+                    @include pad {
+                        padding-right: 9%;
+                    }
+                }
+            }
+            a{
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                font-family: $ffp;
+                font-weight: $fws;
+                font-size: $fz24;
+                line-height: $lh20;
+                color: $darkgreen;
+                background-color: $lightgreen;
+                padding: 10px;
+                &:hover{
+                    color:$white;
+                    background-color: $darkgreen;
+                }
+            }
+        }
+        
+        
+
+    }
+    .footer{
+        max-width: 100%;
+        .up{
+            max-width: 100%;
+            background-color: $darkgreen;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            .upart{
+                max-width: 80%;
+                margin: 0 auto;
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                @include pad{
+                    flex-direction: column;
+                }
+                .left{
+                    @include pad{
+                        padding-bottom: 33px;
+                    }
+                    .logo{
+                        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-light.svg);
+                        width: 40px;
+                        height: 40px;
+                        position: absolute;
+                        left: 0;
+                        @include pad{
+                            left:-20px;
+                            top:-10px;
+                        };
+                    }
+                    p{
+                        font-family: "Helvetica Neue";
+                        font-weight: "Reagular";
+                        font-size: $fz24;
+                        line-height: $lh29;
+                        color: $lightgreen;
+                    }
+                }
+                .right{
+                    background-color: $lightgreen;
+                    
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    input{
+                            border:none;
+                            background-color: $lightgreen;
+                        }
+                    }
+                    .emil{
+                        padding-left: 10px;
+                    }
+                    .forward{
+                        display: block;
+                        background-color: $yellow;
+                        background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_forward-24px.png?raw=true);
+                        background-repeat: no-repeat;
+                        padding: 15px;
+                    }
+                    a:hover{
+                        background-color: rgba(255, 255, 0, 0.774);
+                    }
+                }
+        }
+        .down{
+            max-width: 100%;
+            background-color: $lightgreen;
+            margin: 0 auto;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            .downart{
+                max-width: 80%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                .dwonleft{
+                    width: 80%;
+                }
+                .downlogo {
+                    background-image:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-lg-dark.svg);
+                    background-repeat: no-repeat;
+                    width: 172px;
+                    height: 30px;
+                    padding-bottom: 115px;
+                    @include pad{
+                        padding-bottom: 39.5px;
+                    };
+                }
+                .tel{
+                    font-family: "Helvetica Neue";
+                    font-weight: "Regular";
+                    font-size: $fz16;
+                    line-height: $lh20;
+                    color: $darkgreen;
+                }
+                .downright{
+                    width: 100%;
+                    background-image: url(../images/sm-今天是個吃甜點的好日子.svg);
+                    background-repeat: no-repeat;
+                    width: 60px;
+                    height: 220px;
+                    @include pad {
+                        display: none;
+                    }
+                }
+  
+            }
+            
+        }
+        .footerlast{
+            max-width: 100%;
+            background-color: $lightgreen;
+            .footerbox{
+                max-width: 80%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                @include pad{
+                    flex-direction: column;
+                };
+                .linebox{
+                    display: flex;
+                    @include pad {
+                        padding-bottom: 23px;
+                    }
+                    .line{
+                        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-line%40.svg);
+                        background-repeat: no-repeat;
+                        width: 32px;
+                        height: 32px;
+                        padding-right: 8px;
+                    }
+                    .fb{
+                        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-facebook.svg);
+                        background-repeat: no-repeat;
+                        width: 32px;
+                        height: 32px;
+                    }
+                    .year{
+                        font-family: "Times";
+                        font-weight: "Regular";
+                        font-size: $fz16;
+                        line-height: 19px;
+                        color: $darkgreen;
+                    }
+                }
+            }
+        }
+        }
+        
+    
+}
