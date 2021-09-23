@@ -727,6 +727,7 @@ img {
 }
 .container .item .itempage .item1 img {
   width: 100%;
+  vertical-align: top;
 }
 .container .item .itempage .itemname {
   display: -webkit-box;
@@ -745,7 +746,6 @@ img {
   color: #3F5D45;
   padding: 10px;
   width: 50%;
-  border-right: 1px solid #EAF0ED;
 }
 .container .item .itempage a {
   display: block;
@@ -797,8 +797,9 @@ img {
 }
 .container .item .itempage2 .item1 img {
   max-width: 100%;
+  vertical-align: top;
 }
-.container .item .itempage2 .itemname {
+.container .item .itempage2 .itemname2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,7 +808,7 @@ img {
       justify-content: space-around;
   width: 100%;
 }
-.container .item .itempage2 .itemname li {
+.container .item .itempage2 .itemname2 li {
   width: 50%;
   font-size: 20px;
   line-height: 20px;
@@ -815,7 +816,6 @@ img {
   font-weight: "light";
   color: #3F5D45;
   padding: 10px;
-  border-right: 1px solid #EAF0ED;
 }
 .container .item .itempage2 a {
   display: block;
@@ -866,11 +866,10 @@ img {
   right: 22px;
 }
 .container .item .itempage3 .item1 .image1 {
-  background-image: url(https://images.unsplash.com/photo-1504473089979-b1c4993a9653?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9db69b72e1f7d1b4e5c81cee531108ff&auto=format&fit=crop&w=700&q=60);
-  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 315px;
+  height: 300px;
+  vertical-align: top;
 }
 .container .item .itempage3 .itemname {
   display: -webkit-box;
@@ -889,7 +888,6 @@ img {
   font-weight: "light";
   color: #3F5D45;
   padding: 10px;
-  border-right: 1px solid #EAF0ED;
 }
 @media (max-width: 767px) {
   .container .item .itempage3 .itemname li {
@@ -912,16 +910,19 @@ img {
   color: #FFFFFF;
   background-color: #3F5D45;
 }
+.container .dessertName {
+  border-right: 1px solid #EAF0ED;
+}
 .container .footer {
   max-width: 100%;
 }
-.container .footer .up {
+.container .footer .subscription {
   max-width: 100%;
   background-color: #3F5D45;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.container .footer .up .upart {
+.container .footer .subscription .upart {
   max-width: 80%;
   margin: 0 auto;
   position: relative;
@@ -935,7 +936,7 @@ img {
           align-items: center;
 }
 @media (max-width: 767px) {
-  .container .footer .up .upart {
+  .container .footer .subscription .upart {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -943,11 +944,11 @@ img {
   }
 }
 @media (max-width: 767px) {
-  .container .footer .up .upart .left {
+  .container .footer .subscription .upart .subscriptionTitle {
     padding-bottom: 33px;
   }
 }
-.container .footer .up .upart .left .logo {
+.container .footer .subscription .upart .subscriptionTitle .logo {
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-light.svg);
   width: 40px;
   height: 40px;
@@ -955,19 +956,19 @@ img {
   left: 0;
 }
 @media (max-width: 767px) {
-  .container .footer .up .upart .left .logo {
+  .container .footer .subscription .upart .subscriptionTitle .logo {
     left: -20px;
     top: -10px;
   }
 }
-.container .footer .up .upart .left p {
+.container .footer .subscription .upart .subscriptionTitle p {
   font-family: "Helvetica Neue";
   font-weight: "Reagular";
   font-size: 24px;
   line-height: 29px;
   color: #EAF0ED;
 }
-.container .footer .up .upart .right {
+.container .footer .subscription .upart .right {
   background-color: #EAF0ED;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -979,31 +980,31 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.container .footer .up .upart .right input {
+.container .footer .subscription .upart .right input {
   border: none;
   background-color: #EAF0ED;
 }
-.container .footer .up .upart .emil {
+.container .footer .subscription .upart .emil {
   padding-left: 10px;
 }
-.container .footer .up .upart .forward {
+.container .footer .subscription .upart .forward {
   display: block;
   background-color: #FFE180;
   background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_forward-24px.png?raw=true);
   background-repeat: no-repeat;
   padding: 15px;
 }
-.container .footer .up .upart a:hover {
+.container .footer .subscription .upart a:hover {
   background-color: rgba(255, 255, 0, 0.774);
 }
-.container .footer .down {
+.container .footer .connection {
   max-width: 100%;
   background-color: #EAF0ED;
   margin: 0 auto;
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.container .footer .down .downart {
+.container .footer .connection .downart {
   max-width: 80%;
   margin: 0 auto;
   display: -webkit-box;
@@ -1013,10 +1014,10 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.container .footer .down .downart .dwonleft {
+.container .footer .connection .downart .connectionList {
   width: 80%;
 }
-.container .footer .down .downart .downlogo {
+.container .footer .connection .downart .connectionlogo {
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-lg-dark.svg);
   background-repeat: no-repeat;
   width: 172px;
@@ -1024,18 +1025,18 @@ img {
   padding-bottom: 115px;
 }
 @media (max-width: 767px) {
-  .container .footer .down .downart .downlogo {
+  .container .footer .connection .downart .connectionlogo {
     padding-bottom: 39.5px;
   }
 }
-.container .footer .down .downart .tel {
+.container .footer .connection .downart .tel {
   font-family: "Helvetica Neue";
   font-weight: "Regular";
   font-size: 16px;
   line-height: 20px;
   color: #3F5D45;
 }
-.container .footer .down .downart .downright {
+.container .footer .connection .downart .connectionSubtitle {
   width: 100%;
   background-image: url(../images/sm-今天是個吃甜點的好日子.svg);
   background-repeat: no-repeat;
@@ -1043,7 +1044,7 @@ img {
   height: 220px;
 }
 @media (max-width: 767px) {
-  .container .footer .down .downart .downright {
+  .container .footer .connection .downart .connectionSubtitle {
     display: none;
   }
 }
